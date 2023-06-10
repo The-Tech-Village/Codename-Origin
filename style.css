@@ -49,8 +49,8 @@ hr {
 }
 @font-face {
     font-family: 'darknetitalic';
-    src: url('/Assets/fonts/darknetitalic-rgn8b-webfont.woff2') format('woff2'),
-         url('/Assets/fonts/darknetitalic-rgn8b-webfont.woff') format('woff');
+    src: url('./Assets/fonts/darknetitalic-rgn8b-webfont.woff2') format('woff2'),
+         url('./Assets/fonts/darknetitalic-rgn8b-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -58,8 +58,8 @@ hr {
 
 @font-face {
     font-family: 'darknetregular';
-    src: url('/Assets/fonts/darknet-k7xox-webfont.woff2') format('woff2'),
-         url('/Assets/fonts/darknet-k7xox-webfont.woff') format('woff');
+    src: url('./Assets/fonts/darknet-k7xox-webfont.woff2') format('woff2'),
+         url('./Assets/fonts/darknet-k7xox-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
