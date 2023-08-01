@@ -7,7 +7,7 @@
       crossorigin="anonymous"
     ></script>
     <meta charset="utf-8" />
-    <title>Download Button with Timer</title>
+    <title>Generate Your Code</title>
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -39,23 +39,28 @@
         outline: none;
         border: none;
         color: #0e0d0d;
-        font-weight: 500;
-        font-size: large;
+        font-weight: bolder;
+        font-size: 40px;
         font-style: oblique;
         display: flex;
         cursor: pointer;
         padding: 16px 25px;
-        border-radius: 15px;
+        border-radius: 25px;
         align-items: center;
         white-space: nowrap;
         background: #afcdf1;
         transition: all 0.2s ease;
-        border: 8px solid #1e1f21;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border: 5px solid #1e1f21;
+        box-shadow: 7px 5px 100px rgba(255, 255, 255, 0.989);
+
       }
 
       .download-btn:hover {
         background: #8d9195;
+        color: #f7fb04;
+        border:5px solid #1e1f21;
+        font-weight: bolder;
+        font-size: 45px;
       }
 
       .download-btn.timer {
@@ -64,6 +69,10 @@
         transition: none;
         font-size: 1.6rem;
         pointer-events: none;
+      }
+      .download-btn.timer:hover {
+        background: rgb(175, 74, 74);
+        color: #000;
       }
 
       .download-btn.timer b {
@@ -102,11 +111,11 @@
         }
         let timer = downloadBtn.dataset.timer;
         downloadBtn.classList.add("timer");
-        downloadBtn.innerHTML = `Generating your Code in  <br> <b>${timer}</b> seconds`;
+        downloadBtn.innerHTML = `Generating Code in <b>${timer}</b> sec`;
         const initCounter = setInterval(() => {
           if (timer > 0) {
             timer--;
-            return (downloadBtn.innerHTML = `Generating your Code  in <br><b>${timer}</b> seconds`);
+            return (downloadBtn.innerHTML = `Generating Code in <b>${timer}</b> sec`);
           }
           clearInterval(initCounter);
           location.href = fileLink;
@@ -114,7 +123,7 @@
           setTimeout(() => {
             downloadBtn.classList.replace("timer", "disable-timer");
             downloadBtn.innerHTML = `<span class="icon material-symbols-rounded">vertical_align_bottom</span>
-                                     <span class="text">Download Again</span>`;
+                                     <span class="text">Generate Again</span>`;
           }, 3000);
         }, 1000);
       };
