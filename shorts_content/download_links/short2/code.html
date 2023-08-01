@@ -1,11 +1,223 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en" dir="ltr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <title>Download Code</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        /* Google Font CDN Link */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            width: 100%;
+            background: linear-gradient(45deg, blue, black,
+                    #265df2);
+            /* height: 100%; */
+
+
+        }
+
+
+        .text-boxes {
+            height: 80vh;
+            width: 100%;
+            display: flex;
+            /* flex-direction: column; */
+            align-items: center;
+
+            padding: 0 30px;
+            margin-bottom: 60px;
+        }
+
+
+
+
+        .text-boxes .text-box {
+            height: 100%;
+            max-width: 660px;
+            width: 100%;
+            margin: 55px 20px;
+        }
+
+        .text-boxes .text-box .topic {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            margin: 14px;
+        }
+
+        .text-boxes .text-box textarea {
+            height: 100%;
+            width: 100%;
+            padding: 30px;
+            font-size: 15px;
+            font-weight: 400;
+            outline: none;
+            border: 1px solid #265cf23a;
+            border-radius: 8px;
+            background: #e7edfe43;
+            color: #fff;
+        }
+
+        .text-box textarea::-webkit-scrollbar {
+            display: none;
+        }
+
+        .text-boxes .text-box button {
+            height: 45px;
+            width: 155px;
+            color: #fff;
+            background: #265df2;
+            outline: none;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: 400;
+            margin: 8px 0;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .text-boxes .text-box button:hover {
+            background: #0e4bf1;
+        }
+
+        @media (max-width: 400px) {
+            .text-boxes .text-box button {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width:1300px) {
+            .text-boxes {
+                flex-direction: column;
+                /* justify-content: center; */
+                align-items: center;
+                text-align: center;
+                padding: 0% !important;
+                height: 40%;
+            }
+
+            .text-boxes .text-box {
+                width: 100%;
+                margin: 0px 0px;
+            }
+
+            .text-boxes .text-box .topic {
+                font-size: 18px;
+                font-weight: 600;
+                color: #fff;
+                margin: 4px;
+            }
+
+            .text-boxes .text-box textarea {
+                height: 100%;
+                width: 90%;
+                margin: 30px;
+                font-size: 15px;
+                font-weight: 400;
+                outline: none;
+                border: 1px solid #265cf23a;
+                border-radius: 8px;
+                background: #e7edfe43;
+                color: #fff;
+            }
+
+        }
+
+        @media screen and (max-width:700px) {
+
+            .text-boxes .text-box textarea {
+                height: 100%;
+                width: 80%;
+                margin: 30px;
+                font-size: 15px;
+                font-weight: 400;
+                outline: none;
+                border: 1px solid #265cf23a;
+                border-radius: 8px;
+                background: #e7edfe43;
+                color: #fff;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    Hello code2
+    <div class="text-boxes">
+        <div class="text-box HTMLBox">
+            <div class="topic">HTML Code:</div>
+            <textarea id="HTMLBox" readonly>
+                Add HTML Codes Here
+
+            </textarea>
+
+            <button id="HTMLButton">Copy Codes</button>
+        </div>
+
+
+        <div class="text-box CSSBox">
+            <div class="topic">CSS Code:</div>
+            <textarea id="CSSBox" readonly>
+                Add CSS Codes Here
+             </textarea>
+
+            <button id="CSSButton">Copy Codes</button>
+        </div>
+
+
+        <div class="text-box JSBox">
+            <div class="topic">JavaScript Code:</div>
+            <textarea id="JSBox" readonly>
+                Add 
+                your js code
+            </textarea>
+            <button id="JSButton">Copy Codes</button>
+        </div>
+    </div>
+
+    <script>
+        // HTML BOx JS Code
+        let HTMLBox = document.getElementById("HTMLBox");
+        let HTMLButton = document.getElementById("HTMLButton");
+
+        HTMLButton.onclick = function () {
+            HTMLBox.select();
+            document.execCommand("copy");
+            HTMLButton.innerText = " Copied";
+        };
+
+        // CSS Box Js Code
+        let CSSBox = document.getElementById("CSSBox");
+        let CSSButton = document.getElementById("CSSButton");
+
+        CSSButton.onclick = function () {
+            CSSBox.select();
+            document.execCommand("copy");
+            CSSButton.innerText = " Copied";
+        };
+        // JavaScript BOx JS Code
+        let JSBox = document.getElementById("JSBox");
+        let JSButton = document.getElementById("JSButton");
+
+        JSButton.onclick = function () {
+            JSBox.select();
+            document.execCommand("copy");
+            JSButton.innerText = " Copied";
+        };
+    </script>
+
 </body>
+
 </html>
