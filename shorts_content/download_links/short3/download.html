@@ -7,7 +7,7 @@
       crossorigin="anonymous"
     ></script>
     <meta charset="utf-8" />
-    <title>Download Button with Timer | CodingNepal</title>
+    <title>Download Button with Timer</title>
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -31,38 +31,45 @@
         min-height: 100vh;
         align-items: center;
         justify-content: center;
-        background: #e3f2fd;
+        background: linear-gradient( 45deg, red, orange);
+        
       }
 
       .download-btn {
         outline: none;
         border: none;
-        color: #fff;
+        color: #0e0d0d;
+        font-weight: 500;
+        font-size: large;
+        font-style: oblique;
         display: flex;
         cursor: pointer;
         padding: 16px 25px;
-        border-radius: 6px;
+        border-radius: 15px;
         align-items: center;
         white-space: nowrap;
-        background: #4a98f7;
+        background: #afcdf1;
         transition: all 0.2s ease;
+        border: 8px solid #1e1f21;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       }
 
       .download-btn:hover {
-        background: #2382f6;
+        background: #8d9195;
       }
 
       .download-btn.timer {
         color: #000;
-        background: none;
+        background: white;
         transition: none;
         font-size: 1.6rem;
         pointer-events: none;
       }
 
       .download-btn.timer b {
-        color: #4a98f7;
+        color: #f40808;
         padding: 0 8px;
+        text-align: center;
       }
 
       .download-btn .icon {
@@ -79,7 +86,7 @@
   <body>
     <button class="download-btn" data-timer="10">
       <span class="icon material-symbols-rounded">vertical_align_bottom</span>
-      <span class="text">Download Files</span>
+      <span class="text">Get Your Code</span>
     </button>
 
     <a href=""></a>
@@ -95,15 +102,15 @@
         }
         let timer = downloadBtn.dataset.timer;
         downloadBtn.classList.add("timer");
-        downloadBtn.innerHTML = `Your download will begin in <b>${timer}</b> seconds`;
+        downloadBtn.innerHTML = `Generating your Code in  <br> <b>${timer}</b> seconds`;
         const initCounter = setInterval(() => {
           if (timer > 0) {
             timer--;
-            return (downloadBtn.innerHTML = `Your download will begin in <b>${timer}</b> seconds`);
+            return (downloadBtn.innerHTML = `Generating your Code  in <br><b>${timer}</b> seconds`);
           }
           clearInterval(initCounter);
           location.href = fileLink;
-          downloadBtn.innerText = "Your file is downloading...";
+          downloadBtn.innerText = "Redirecting...";
           setTimeout(() => {
             downloadBtn.classList.replace("timer", "disable-timer");
             downloadBtn.innerHTML = `<span class="icon material-symbols-rounded">vertical_align_bottom</span>
