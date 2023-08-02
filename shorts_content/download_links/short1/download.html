@@ -29,6 +29,7 @@
       body {
         display: flex;
         min-height: 100vh;
+        padding: 10px;
         align-items: center;
         justify-content: center;
         background: linear-gradient(45deg, red, orange);
@@ -110,6 +111,78 @@
         font-size: 20px;
         padding-bottom: 30px;
       }
+
+      .content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-evenly;
+        text-align: center;
+        margin: 50px;
+        border: 10px solid #000;
+        border-radius: 30px;
+        padding: 30px;
+      
+      }
+
+      .left{
+        padding: 30px;
+        border: 10px solid black;
+        background-color: #0000004b;
+        border-radius: 30px;
+        filter: drop-shadow(10px 10px 10px rgba(255, 255, 255, 0.51));
+      }
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+
+      .right{
+        background-color: white;
+        border-radius: 30px;
+        padding: 30px;
+        width: 50%;
+        height: 100%;
+        box-shadow: 10px 10px 10px #000;
+      }
+
+      .right .title{
+        font-size: 40px;
+        font-weight: 600;
+        padding-bottom: 30px;
+      }
+
+      .right .info{
+        font-size: 20px;
+        font-weight: 500;
+        text-align: justify;
+      }
+
+      @media screen and (max-width:1400px) {
+        .content{
+          display: block;
+          margin: 20px;
+          width: 80%;
+        }
+        .left{
+          width: 100%;
+          height: 100%;
+        }
+        .right{
+          width: 100%;
+          height: 100%;
+          margin-top: 20px;
+        }
+        .title{
+          font-size: 30px;
+        }
+        .info{
+          font-size: 15px;
+          text-align:left;
+        }
+        
+      }
     </style>
   </head>
 
@@ -117,17 +190,19 @@
     <div class="flex">
       <div class="head">
         <h1>Codename Origin 💻</h1>
-        <p>
-          By the end of this tutorial, you'll have a good understanding of how
-          to leverage CSS to create engaging user interactions and enhance your
-          web projects with subtle yet impressive effects. Join us on this
-          coding journey as we breathe life into a static card element and make
-          it truly stand out with a greeting message appearing as if by magic
-          when users hover over it. Let's dive in and elevate your web design
-          skills with this fun and creative tutorial!
-        </p>
-        <p>Click the button below to generate your code</p>
       </div>
+      <div class="content">
+        <div class="left">
+          <img src="./Screenshot 2023-08-02 175710.png" alt="" />
+        </div>
+        <div class="right">
+          <h1>Lorem ipsum dolor sit amet.</h1>
+          <div class="info">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi amet veritatis, labore sint impedit delectus voluptate obcaecati molestiae aspernatur laboriosam sequi itaque cupiditate. Asperiores quasi eos odio, officia similique, nulla deleniti officiis maxime omnis sequi cumque ducimus repellat animi. Quam ratione quidem aperiam, iure amet, eligendi voluptatem quos corrupti, impedit possimus tempore? Itaque, porro nihil. Odio nihil nostrum illo. Hic, nulla. Dolores dolore, accusantium distinctio maxime enim rerum, autem, consectetur doloribus vitae debitis iusto quisquam assumenda nostrum illum sunt soluta! Vel ipsum repellat est ea earum accusantium placeat aliquid provident harum, perspiciatis modi. Voluptates consectetur officia illo libero possimus assumenda!
+          </div>
+        </div>
+      </div>
+      <p>Click the button below to generate your code</p>
       <button class="download-btn" data-timer="10">
         <span class="icon material-symbols-rounded">vertical_align_bottom</span>
         <span class="text">Get Your Code</span>
