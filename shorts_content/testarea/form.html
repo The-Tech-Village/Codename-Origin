@@ -16,11 +16,11 @@
         <input type="text" id="shortNumber" placeholder="Enter short number" />
       </div>
       <div class="form-group">
-        <label for="codeEmbed">Code Embed:</label>
+        <label for="title">Title</label>
         <textarea
-          id="codeEmbed"
-          rows="8"
-          placeholder="Enter your code to embed"
+          id="title"
+          rows="3"
+          placeholder="title"
         ></textarea>
         <label for="contentEmbed">Content Embed:</label>
         <textarea
@@ -28,6 +28,14 @@
           rows="8"
           placeholder="Enter your Content to embed"
         ></textarea>
+        <label for="codeEmbed">Code Embed:</label>
+        <textarea
+          id="codeEmbed"
+          rows="8"
+          placeholder="Enter your code to embed"
+        ></textarea>
+        <label for="imageFile">Image File:</label>
+      <input type="file" id="imageFile" accept="image/*" />
       </div>
       <button id="generateBtn">Generate Code Folder</button>
     </div>

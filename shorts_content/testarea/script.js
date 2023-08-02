@@ -2,6 +2,8 @@ document.getElementById('generateBtn').addEventListener('click', function () {
     const shortNumber = document.getElementById('shortNumber').value;
     const codeEmbed = document.getElementById('codeEmbed').value;
     const contentEmbed = document.getElementById('contentEmbed').value;
+    const title = document.getElementById('title').value;
+    const imageFile = document.getElementById('imageFile').files[0]; 
     const folderName = `short${shortNumber}`;
 
     const zip = new JSZip();
@@ -14,6 +16,11 @@ document.getElementById('generateBtn').addEventListener('click', function () {
     const downloadHTMLContent = getDownloadHTML();
     zip.file('download.html', downloadHTMLContent);
 
+    // Add the image file to the zip
+    if (imageFile) {
+        zip.file('image.png', imageFile);
+    }
+
     // Generate the zip file
     zip.generateAsync({ type: 'blob' })
         .then(function (content) {
@@ -24,58 +31,75 @@ document.getElementById('generateBtn').addEventListener('click', function () {
 
     function getCodeHTML(codeEmbed) {
         return `<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
-  <title>Document</title>
-  <style>
-      @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@700&display=swap');
-
-      body {
-          margin: 0;
-          padding: 50px;
-          background-color: black;
-          font-family: 'Exo 2', sans-serif;
-          font-family: 'Pacifico', cursive;
-
-      }
-
-      .code {
-          background: linear-gradient(to right, red, orange);
-          border-radius: 30px;
-          padding-top: 15px;
-          padding-bottom: 15px;
-          padding-left: 15px;
-          padding-right: 15px;
-      }
-
-      .head h1 {
-          text-align: center;
-          color: white;
-          font-size: 60px;
-      }
-  </style>
-
-</head>
-
-<body>
-  <div class="head">
-      <h1>Codename Origin 💻</h1>
-  </div>
-  <hr>
-  <div class="code">
-      ${codeEmbed}
-  </div>
-
-</body>
-
-</html>`;
+        <html lang="en">
+          <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Pacifico"
+            />
+            <title>${shortNumber}</title>
+            <style>
+              @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@700&display=swap");
+        
+              body {
+                margin: 0;
+                padding: 50px;
+                background-color: black;
+                font-family: "Exo 2", sans-serif;
+                font-family: "Pacifico", cursive;
+              }
+        
+              .code {
+                background: linear-gradient(30deg, black, red, orange, black);
+                border-radius: 30px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-left: 15px;
+                padding-right: 15px;
+                border: 2px solid white;
+                box-shadow: 7px 5px 100px rgba(255, 255, 255, 0.989);
+              }
+        
+              .head h1 {
+                text-align: center;
+                color: white;
+                font-size: 60px;
+                text-shadow: 20px 20px 10px rgb(0, 0, 0);
+              }
+            </style>
+          </head>
+        
+          <body>
+            <div class="head">
+              <h1>Codename Origin 💻</h1>
+            </div>
+            <hr />
+            <div class="code">
+            ${codeEmbed}
+              <div>
+              <script
+                async
+                src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+              ></script>
+            </div>
+          </body>
+        </html>
+        `;
     }
 
     function getDownloadHTML() {
+        // Convert the image file to a data URL using FileReader
+        const reader = new FileReader();
+        let imageDataURL = '';
+
+        if (imageFile) {
+            reader.onload = function (event) {
+                imageDataURL = event.target.result;
+            };
+            reader.readAsDataURL(imageFile);
+        }
         return `<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -188,23 +212,104 @@ document.getElementById('generateBtn').addEventListener('click', function () {
           font-size: 20px;
           padding-bottom: 30px;
       }
+      .content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-evenly;
+        text-align: center;
+        margin: 50px;
+        border: 10px solid #000;
+        border-radius: 30px;
+        padding: 30px;
+      
+      }
+
+      .left{
+        padding: 30px;
+        border: 10px solid black;
+        background-color: #0000004b;
+        border-radius: 30px;
+        filter: drop-shadow(10px 10px 10px rgba(255, 255, 255, 0.51));
+      }
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+
+      .right{
+        background-color: white;
+        border-radius: 30px;
+        padding: 30px;
+        width: 50%;
+        height: 100%;
+        box-shadow: 10px 10px 10px #000;
+      }
+
+      .right .title{
+        font-size: 40px;
+        font-weight: 600;
+        padding-bottom: 30px;
+      }
+
+      .right .info{
+        font-size: 20px;
+        font-weight: 500;
+        text-align: justify;
+      }
+
+      @media screen and (max-width:1400px) {
+        .content{
+          display: block;
+          border: 0px solid black;
+          padding: 4px;
+        }
+        .left{
+          width: 100%;
+          height: 100%;
+          border: 1px solid black;
+        }
+        .right{
+          width: 100%;
+          height: 100%;
+          margin-top: 20px;
+          border: 1px solid black;
+        }
+        .title{
+          font-size: 10px;
+        }
+        .info{
+          font-size: 5px;
+          text-align:left;
+        }
+        
+      }
   </style>
 </head>
 
 <body>
-  <div class="flex">
-      <div class="head">
-          <h1>Codename Origin 💻</h1>
-          <p>
-          ${contentEmbed}
-        </p>
-          <p>Click the button below to generate your code</p>
-      </div>
-      <button class="download-btn" data-timer="10">
-          <span class="icon material-symbols-rounded">vertical_align_bottom</span>
-          <span class="text">Get Your Code</span>
-      </button>
+<div class="flex">
+<div class="head">
+  <h1>Codename Origin 💻</h1>
+</div>
+<p>Click the button below to generate your code</p>
+<button class="download-btn" data-timer="10">
+  <span class="icon material-symbols-rounded">vertical_align_bottom</span>
+  <span class="text">Get Your Code</span>
+</button>
+<div class="content">
+  <div class="left">
+    <img src="./image.png" alt="" />
   </div>
+  <div class="right">
+    <h1>${title}</h1>
+    <div class="info">
+      ${contentEmbed}
+    </div>
+  </div>
+</div>
+</div>
 
   <script>
       const downloadBtn = document.querySelector(".download-btn");
