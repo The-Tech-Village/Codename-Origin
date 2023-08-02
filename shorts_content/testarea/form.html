@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate Code Folder</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  </head>
+
+  <body>
+    <div class="form-container">
+      <div class="form-group">
+        <label for="shortNumber">Short No.:</label>
+        <input type="text" id="shortNumber" placeholder="Enter short number" />
+      </div>
+      <div class="form-group">
+        <label for="codeEmbed">Code Embed:</label>
+        <textarea
+          id="codeEmbed"
+          rows="8"
+          placeholder="Enter your code embed"
+        ></textarea>
+        <label for="contentEmbed">Content Embed:</label>
+        <textarea
+          id="contentEmbed"
+          rows="8"
+          placeholder="Enter your code embed"
+        ></textarea>
+      </div>
+      <button id="generateBtn">Generate Code Folder</button>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
