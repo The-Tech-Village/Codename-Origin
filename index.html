@@ -17,7 +17,6 @@
 
     gtag("config", "G-WY1PH8D967");
   </script>
-
   <body>
     <div class="bgimg">
       <div class="box">
@@ -43,61 +42,24 @@
         </div>
       </div>
     </div>
-
-    <script>
-      // Set the date we're counting down to
-      var countDownDate = new Date("Sept 19, 2023 15:37:25").getTime();
-
-      // Update the count down every 1 second
-      var countdownfunction = setInterval(function () {
-        // Get todays date and time
-        var now = new Date().getTime();
-
-        // Find the distance between now an the count down date
-        var distance = countDownDate - now;
-
-        // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Output the result in an element with id="demo"
-        document.getElementById("demo").innerHTML =
-          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-        // If the count down is over, write some text
-        if (distance < 0) {
-          clearInterval(countdownfunction);
-          document.getElementById("demo").innerHTML = "EXPIRED";
-        }
-      }, 1000);
-    </script>
     <script src="confetti.js"></script>
+    <script src="script.js"></script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2866700727662490"
+      crossorigin="anonymous"
+    ></script>
+    <!-- blog -->
+    <ins
+      class="adsbygoogle"
+      style="display: block"
+      data-ad-client="ca-pub-2866700727662490"
+      data-ad-slot="5078076711"
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    ></ins>
     <script>
-        
-// for starting the confetti
-
-const start = () => {
-    setTimeout(function () {
-        confetti.start();
-    }, 1000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
-};
-
-//  for stopping the confetti
-
-const stop = () => {
-    setTimeout(function () {
-        confetti.stop();
-    }, 10000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
-};
-// after this here we are calling both the function so it works
-start();
-stop();
-
-  // if you dont want to make it stop and make it infinite you can just remove the stop function 😊
+      (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   </body>
 </html>
