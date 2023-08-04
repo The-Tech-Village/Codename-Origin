@@ -4,7 +4,7 @@ document.getElementById('generateBtn').addEventListener('click', function () {
     const contentEmbed = document.getElementById('contentEmbed').value;
     const title = document.getElementById('title').value;
     const imageFile = document.getElementById('imageFile').files[0]; 
-    const folderName = `short${shortNumber}`;
+    const folderName = `code${shortNumber}`;
 
     const zip = new JSZip();
 
