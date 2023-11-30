@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Styles/style.css"> <!-- Create this file for your additional styles -->
+    <title>Vedant Kahalekar</title>
+</head>
+<body>
+
+
+<!-- About Section -->
+<section id="about" class="container-fluid text-center py-5">
+    <div class="row align-items-center">
+        <div class="col-md-6 order-md-2">
+            <!-- Your profile photo goes here -->
+            <img src="./images/HeroImage.jpg" alt="Your Name" class="img-fluid rounded-circle profile-img">
+        </div>
+        <div class="col-md-6 order-md-1">
+            <!-- Your name and short bio -->
+            <h1 class="display-4">Vedant Kahalekar</h1>
+            <p class="lead">Passionate about creating innovative solutions and building awesome projects. Let's turn ideas into reality!</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Projects Section -->
+<section id="projects" class="container mt-5">
+    <h2>Projects</h2>
+    <div class="row" id="projects-container">
+        <!-- Projects will be dynamically loaded here -->
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center p-3">
+    <p>&copy; 2023 Vedant Kahalekar. All Rights Reserved.</p>
+</footer>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+
+<!-- Your custom script for loading projects from JSON goes here -->
+<script src="./JS/script.js"></script>
+<script src="three.r134.min.js"></script>
+<script src="vanta.waves.min.js"></script>
+<script>
+VANTA.WAVES({
+  el: "#about",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x0
+})
+</script>
+
+</body>
+</html>

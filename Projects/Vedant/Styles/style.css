@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Add your custom styles here */
+:root {
+    --primary-color: #212529;
+    --secondary-color: #ffffff;
+    --dark-color: #343a40;
+    --light-color: #f8f9fa;
+}
+
+body {
+    font-family: 'Kalam', cursive;
+}
+
+/* Updated styles for the About Section */
+
+#about {
+    background-color: #212529;
+    color: #ffffff;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #ffffff;
+    object-fit: cover;
+}
+
+#about h1,
+#about p {
+    margin-bottom: 20px;
+}
+
+#about h1 {
+    font-size: 2.5rem;
+}
+
+#about p {
+    font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #about {
+        min-height: 300px;
+    }
+
+    #about h1 {
+        font-size: 2rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+}
+
+#projects h2 {
+    text-align: center;
+}
+
+.card {
+    transition: transform 0.3s;
+    border: 3px solid #212529;
+    border-radius: 15px;
+}
+
+.card img {
+    width: 100%; /* Image takes the full width of the card */
+    height: 150px; /* Adjust the height as needed */
+    object-fit: cover; /* Ensure the image covers the entire space */
+    border-radius: 12px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    #about {
+        padding: 40px 0;
+    }
+}
