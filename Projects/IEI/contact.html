@@ -1,78 +1,87 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <style>
-      .card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        max-width: 300px;
-        margin: auto;
-        text-align: center;
-        font-family: arial;
-      }
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile Card</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-bottom: 20px;
+    }
 
-      .title {
-        color: grey;
-        font-size: 18px;
-      }
+    .card-img-top {
+      width: 100%;
+      height: auto;
+    }
 
-      button {
-        border: none;
-        outline: 0;
-        display: inline-block;
-        padding: 8px;
-        color: white;
-        background-color: #000;
-        text-align: center;
-        cursor: pointer;
-        width: 100%;
-        font-size: 18px;
-      }
+    .title {
+      color: grey;
+      font-size: 18px;
+    }
 
-      a {
-        text-decoration: none;
-        font-size: 22px;
-        color: black;
-      }
+    button {
+      border: none;
+      outline: 0;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+    }
 
-      button:hover,
-      a:hover {
-        opacity: 0.7;
-      }
-    </style>
-  </head>
-  <body>
-    <h2 style="text-align: center">User Profile Card</h2>
+    button:hover {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
 
-    <div class="card">
-      <img src="./IMG20230828124729-01.jpeg-modified-removebg-preview.png" alt="John" style="width: 100%" />
-      <h1>Vedant Kahalekar</h1>
-      <p class="title">CEO & Founder, Example</p>
-      <p>Harvard University</p>
-      <div style="margin: 24px 0">
-        <a href="#"><i class="fa fa-dribbble"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
-        <a href="#"><i class="fa fa-facebook"></i></a>
+<div class="container">
+  <h2 class="text-center mt-3 mb-4">User Profile Cards</h2>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <img src="./IMG20230828124729-01.jpeg-modified-removebg-preview.png" alt="Vedant Kahalekar" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Vedant Kahalekar</h5>
+          <p class="card-text title">CEO & Founder, Example</p>
+          <p class="card-text">Harvard University</p>
+          <div class="social-links">
+            <a href="#"><i class="fa fa-dribbble"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+          </div>
+          <button class="btn btn-primary">Contact</button>
+        </div>
       </div>
-      <p><button>Contact</button></p>
     </div>
-
-    <div class="card">
-      <img src="/w3images/team2.jpg" alt="John" style="width: 100%" />
-      <h1>John Doe</h1>
-      <p class="title">CEO & Founder, Example</p>
-      <p>Harvard University</p>
-      <div style="margin: 24px 0">
-        <a href="#"><i class="fa fa-dribbble"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
-        <a href="#"><i class="fa fa-facebook"></i></a>
+    <div class="col-sm-6">
+      <div class="card">
+        <img src="/w3images/team2.jpg" alt="John Doe" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">John Doe</h5>
+          <p class="card-text title">CEO & Founder, Example</p>
+          <p class="card-text">Harvard University</p>
+          <div class="social-links">
+            <a href="#"><i class="fa fa-dribbble"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+          </div>
+          <button class="btn btn-primary">Contact</button>
+        </div>
       </div>
-      <p><button>Contact</button></p>
     </div>
-  </body>
+  </div>
+</div>
+
+</body>
 </html>
