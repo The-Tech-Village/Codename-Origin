@@ -1,86 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Upasthiti</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upasthiti - Attendance Made Easy</title>
+    <meta name="description" content="Upasthiti offers the easiest way to take attendance. Explore our Teacher and Student Apps for seamless authentication.">
+    <meta name="keywords" content="Upasthiti, attendance, teacher app, student app">
+    <meta name="author" content="Your Name">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/12.png" />
+    
+    <!-- ==== Open Graph (OG) Tags ==== -->
+    <meta property="og:title" content="Upasthiti - Attendance Made Easy">
+    <meta property="og:description" content="Upasthiti offers the easiest way to take Attendance. Explore our Teacher and Student Apps for seamless Attendance.">
+    <meta property="og:image" content="./img/up.png">
+    <meta property="og:url" content="https://codenameorigin.tech/projects/upasthiti/main">
+    <meta property="og:type" content="website">
 
     <!-- ==== STYLE.CSS ==== -->
     <link rel="stylesheet" href="./css/style.css" />
-
+    
     <!-- ====  REMIXICON CDN ==== -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    
     <!-- ==== ANIMATE ON SCROLL CSS CDN  ==== -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  </head>
-  <body>
+</head>
+<body>
     <!-- ==== HEADER ==== -->
     <header class="container header">
-      <!-- ==== NAVBAR ==== -->
-      <nav class="nav">
-        <div class="logo">
-          <h2>Upasthiti</h2>
-        </div>
-
-        <div class="nav_menu" id="nav_menu">
-          <button class="close_btn" id="close_btn">
-            <i class="ri-close-fill"></i>
-          </button>
-
-          <ul class="nav_menu_list">
-            <li class="nav_menu_item">
-              <!-- <a href="https://github.com/VedantKCSE/Graphical-Password-Authentication" class="nav_menu_link">GitHub Repository</a> -->
-            </li>
-          </ul>
-        </div>
-
-        <button class="toggle_btn" id="toggle_btn">
-          <i class="ri-menu-line"></i>
-        </button>
-      </nav>
+        <!-- ==== NAVBAR ==== -->
+        <nav class="nav">
+            <div class="logo">
+                <h2>Upasthiti</h2>
+            </div>
+            <div class="nav_menu" id="nav_menu">
+                <button class="close_btn" id="close_btn">
+                    <i class="ri-close-fill"></i>
+                </button>
+                <ul class="nav_menu_list">
+                    <li class="nav_menu_item">
+                        <!-- <a href="https://github.com/VedantKCSE/Graphical-Password-Authentication" class="nav_menu_link">GitHub Repository</a> -->
+                    </li>
+                </ul>
+            </div>
+            <button class="toggle_btn" id="toggle_btn">
+                <i class="ri-menu-line"></i>
+            </button>
+        </nav>
     </header>
 
     <section class="wrapper">
-      <div class="container">
-        <div class="grid-cols-2">
-          <div class="grid-item-1">
-            <h1 class="main-heading">
-              Welcome to <span>Upasthiti</span>
-              <br />
-              Authentication made easy.
-            </h1>
-            <p class="info-text">
-              The easiest way to take attendance you have ever seen. Still a work in
-              progress 😊.
-            </p>
-
-            <div class="btn_wrapper">
-              <a href="./img/TeacherApp.apk">
-                <button class="btn view_more_btn">
-                  Teacher App<i class="ri-arrow-right-line"></i>
-                </button>
-              </a>
-              <a href="./img/StudentApp.apk">
-                <button class="btn documentation_btn">Student App</button>
-              </a>
+        <div class="container">
+            <div class="grid-cols-2">
+                <div class="grid-item-1">
+                    <h1 class="main-heading">
+                        Welcome to <span>Upasthiti</span>
+                        <br />
+                        Attendance made easy.
+                    </h1>
+                    <p class="info-text">
+                        The easiest way to take attendance you have ever seen. Still a work in
+                        progress 😊.
+                    </p>
+                    <div class="btn_wrapper">
+                        <a href="./img/TeacherApp.apk">
+                            <button class="btn view_more_btn">
+                                Teacher App<i class="ri-arrow-right-line"></i>
+                            </button>
+                        </a>
+                        <a href="./img/StudentApp.apk">
+                            <button class="btn documentation_btn">Student App</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-item-2">
+                    <div class="team_img_wrapper">
+                        <img src="./img/up.png" alt="team-img" />
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="grid-item-2">
-            <div class="team_img_wrapper">
-              <img src="./img/up.png" alt="team-img" />
-            </div>
-          </div>
         </div>
-      </div>
     </section>
-<!-- x -->
 
+    <!-- x -->
     <footer></footer>
 
     <!-- ==== ANIMATE ON SCROLL JS CDN -->
@@ -89,5 +92,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <!-- ==== SCRIPT.JS ==== -->
     <script src="./script.js" defer></script>
-  </body>
+</body>
 </html>
